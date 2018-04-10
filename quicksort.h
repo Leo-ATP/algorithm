@@ -1,7 +1,7 @@
-#ifndef QUCIKSORTZ_H
+#ifndef QUICKSORT_H
+#define QUICKSORT_H
 
-#include <iostream>
-#include <vector>
+#include "./common.h"
 using namespace std;
 
 int partition(vector<int> &v, int st, int ed);

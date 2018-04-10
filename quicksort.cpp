@@ -1,6 +1,22 @@
 
-#include "quicksort.h"
+#include "./quicksort.h"
 using namespace std;
+
+
+
+
+int main(){
+
+    int itt[]= {6,3,4,1};
+    vector<int> v(itt, itt+sizeof(itt)/sizeof(int));
+    cout<<v.size()<<endl;
+    quicksort(v,0,v.size()-1);
+
+    for(auto i : v)
+        cout<<i<<endl;
+
+}
+
 
 void quicksort(vector<int> &v, int st,int ed){
     if(st<ed){
@@ -21,17 +37,4 @@ int partition(vector<int> &v, int st, int ed){
     }
     swap(v[i+1],v[ed]);
     return i+1;
-}
-
-
-int main(){
-
-    int itt[]= {6,3,4,1};
-    vector<int> v(itt, itt+sizeof(itt)/sizeof(int));
-    cout<<v.size()<<endl;
-    quicksort(v,0,v.size()-1);
-
-    for(auto i : v)
-        cout<<i<<endl;
-
 }
